@@ -1,0 +1,105 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+
+body{
+  zoom:150%;
+  padding:100px 0;
+  background-color:#c33;
+
+}
+#message{
+  position: absolute;
+  padding-top:25%;
+  padding-left:20%;
+  width: 100px;
+  height: 90px;
+  z-index:45;
+  font-weight:bold;
+  font-family: 'Roboto Condensed', sans-serif;
+
+  margin:0 auto;
+}
+#heart {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    animation: heartbeat 4s infinite;
+    margin:0 auto;
+    z-index: 1;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+  z-index:1;
+    content: "";
+    left: 55px;
+    top: 0;
+    width: 55px;
+    height: 90px;
+    background: #fff;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+	</style>
+</head>
+<body>
+	<div id="heart"><p id="message">Get Better!</p></div>
+</body>
+</html>
